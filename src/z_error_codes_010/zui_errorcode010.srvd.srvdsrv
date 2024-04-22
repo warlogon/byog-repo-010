@@ -1,0 +1,6 @@
+@ObjectModel.leadingEntity.name: 'ZC_ErrorCode010_S'
+define service ZUI_ERRORCODE010 {
+  expose ZC_ERRORCODE010_S as ErrorCode010All;
+  expose ZC_ERRORCODE010 as ErrorCode010;
+  expose ZC_ERRORCODE010TEXT as ErrorCode010Text;
+}

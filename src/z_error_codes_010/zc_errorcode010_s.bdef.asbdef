@@ -1,0 +1,43 @@
+projection implementation in class ZBP_C_ERRORCODE010_S unique;
+strict;
+use draft;
+define behavior for ZC_ErrorCode010_S alias ErrorCode010All
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _ErrorCode010 { create ( augment ); with draft; }
+}
+
+define behavior for ZC_ErrorCode010 alias ErrorCode010
+
+{
+  field ( modify )
+   Description;
+
+
+  use update( augment );
+  use delete;
+
+  use action Deprecate;
+  use action Invalidate;
+  use action CopyErrorCode010;
+
+  use association _ErrorCode010All { with draft; }
+  use association _ErrorCode010Text { create; with draft; }
+}
+
+define behavior for ZC_ErrorCode010Text alias ErrorCode010Text
+
+{
+  use update;
+  use delete;
+
+  use association _ErrorCode010All { with draft; }
+  use association _ErrorCode010 { with draft; }
+}

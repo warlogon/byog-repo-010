@@ -1,0 +1,42 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain Error Code 010",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_ERRORCODE010_O4",
+    "serviceName": "ZUI_ERRORCODE010_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "ErrorCode010All",
+    "name": "Error Code 010",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "ErrorCode010All",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "ErrorCode010",
+        "tableType": "gridTable",
+        "selectionMode": "single",
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true,
+        "rowCountMode": "auto"
+      },
+      {
+        "entitySet": "ErrorCode010Text",
+        "tableType": "gridTable",
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true
+      }
+    ]
+  }
+}
